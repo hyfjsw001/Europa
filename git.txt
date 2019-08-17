@@ -21,13 +21,13 @@
 11.让Git不再追踪某个/某些文件：git rm --cached xx （xx为文件名）
 
 12.Git添加分支：git branch xx （xx为分支名）
- 
+
 13.Git切换分支：git checkout xx （xx为分支名）
 
 14.合并分支：git merge xx（xx为分支名）
 
 15.列出本地分支：git branch
-
+0
 16.删除分支:git branch -d xx (xx为分支名，-D强制删除)
 
 17.添加远程仓库：git remote add origin xxx （xxx为远程地址）
@@ -35,3 +35,15 @@
 18.设置本地分支追踪远程分支：git push --set-upstream
 
 19.克隆仓库：git clone xxx（xxx为远程地址）
+
+
+如何解决git上传文件出错[rejected] master ->
+出现这个问题是因为github中的README.md文件不在本地代码目录中，可以通过如下命令进行代码合并
+1.git pull --rebase origin master
+2.git push origin master
+
+
+假设现在有两个分支 A B
+1. 在B分支上执行 git merge A 后 A就被合到B上了
+2. 在B分支上执行 git rebase A 后，效果与merge是一样的，但是 A就没有了，两个分支就合在一起了。
+
