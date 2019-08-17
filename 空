@@ -1,0 +1,107 @@
+
+
+neovim
+ncm2  semshi  
+screenkey  按键显示
+
+*******
+使用 ffmpge 提取视频流、音频流
+
+安装 ffmoeg
+
+我们先使用 SimpleScreamRecord 进行屏幕录制，保存为 mkv 格式的视频。然后我们将会使用 ffmpeg 工具进行视频音频的提取操作。
+
+在开始分离视频音频之前，我们需要先检查以下我们是否已经安装 ffmpeg 工具，如果没有安装，我们可以先安装 ffmpeg 工具。
+
+sudo apt install ffmpeg
+
+ 
+
+分离音频
+
+如果我们想要对视频里面的音频进行处理，首先要把音频提出出来，我们这里会将使用 ffmoeg 工具将视频中的音频提出并保存为 mp3 格式。
+
+ffmpeg -i original_video.mp4 original_audio.mp3
+
+
+
+Win&Linux双系统时间不同步：
+修改Linux方案：
+timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl set-ntp 0
+
+修改Windows方案：
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]
+    "RealTimeIsUniversal"=dword:00000001
+
+*******
+sudo pacman -Syyu  #arch 下更新
+
+pacman -S yaourt  #安装yaourt
+
+sudo pacman -S fish  #shell fish
+curl -L https://get.oh-my.fish | fish #安装oh-my.fish 插件
+终端下： fish_conf  弹出浏览器配置fish 配色呀什么的
+omf install wttr  #显示天气
+alias 键位 "命令"  定制命令 egg： alias l "ls -la"
+然后保存键位： funcsave 你设定到键位  egg： funcsave l
+
+sudo pacman -S i3 #安装i3  全选
+
+
+sudo pacman -S deepin.com.qq.im #qq
+
+sudo pacman -S electronic-wechat #微信
+
+sudo pacman -S chromium   #chromium
+
+sudo pacman -S kdenlinv   #剪辑视频
+
+sudo pacman -S gimp  #图片处理
+
+sudo pacman -S deepin-screenshot #深度截图
+
+sudo pacman -S libreoffice #office 软件
+
+sudo pacman -S vlc #视频播放器
+
+yaourt GitKraken  #强大的全平台Git客户端
+
+
+sudo pacman -S simplescreenrecorder #录屏
+sudo pacman -S screenkey    #录键盘
+ps -ef|grep screenkey|grep -v grep|cut -c 9-15|xargs kill -s 9   #关掉录制键盘
+
+sudo pacman -S ranger #文件管理器  终端下ranger打开 q推出
+
+sudo pacman -S alacritty #更换terminimal
+sudo pacman -S dmenu  #super+s
+vim ~/.config/i3/.config
+
+sudo pacman -S xorg  #改键位等等
+命令：
+xmodmap   
+#xmodmap -pke 
+#xmodmap -pke > ~/.xmodmap   #  
+xev  #摁什么显示什么
+
+sudo pacman -S variety #壁纸
+sudo pacman -S compton #为了半透明 渲染器
+
+
+Thunder-bird  #邮件
+
+sudo pacman -S virtualbox #虚拟机
+
+sudo pacman -S qbittorrent  #bit下载  transmission
+
+sudo pacman -S cmatrix #炫酷的  cmatrix -b  #cmatrix -lba #cmatrix -ol
+
+
+1.yaourt -S browser360-beta  #安装360浏览器 先下载deb https://bbs.360.cn/thread-15529293-1-1.html  
+2.复制步骤1下载的安装包browser360-beta_10.0.1008.0-1_amd64.deb到目录/tmp/yaourt-tmp-×××/aur-browser360-beta/
+3.shasum browser360-beta_10.0.1008.0-1_amd64.deb #查看sha1
+4.编辑PKGBUILD文件，将其中的1005替换为1008，sha1sum值改为复制的sha1,以上为修改后的结果，然后保存继续到命令行安装软件即可
+
+
+
