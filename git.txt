@@ -32,6 +32,8 @@
 
 17.添加远程仓库：git remote add origin xxx （xxx为远程地址）
 
+17.5  让git记住你的密码  git config credential.helper store
+
 18.设置本地分支追踪远程分支：git push --set-upstream
 
 19.克隆仓库：git clone xxx（xxx为远程地址）
