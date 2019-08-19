@@ -69,6 +69,18 @@ sudo pacman -S vlc #视频播放器
 
 yaourt GitKraken  #强大的全平台Git客户端
 
+sudo pacman -S pycharm # python 编译器
+
+yaourt typora   #Markdown编辑器：Typora
+
+yaourt foxit   #强大的PDF阅读器Foxit
+
+sudo pacman -S shadowsocks-libev
+sudo pacman -S shadowsocks-qt5   #SS
+
+sudo pacman -S electron-ssr  #SSR
+
+
 
 sudo pacman -S simplescreenrecorder #录屏
 sudo pacman -S screenkey    #录键盘
